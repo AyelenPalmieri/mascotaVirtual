@@ -1,0 +1,28 @@
+<h2>¡Bienvenido a la mascota virtual!</h2>
+
+<p>Nombre: {{ miMascota.nombre }}</p>
+<p>Especie: {{ miMascota.especie }}</p>
+<p>Edad: {{ miMascota.edad }}</p>
+<p>Sexo: {{ miMascota.sexo }}</p>
+<p>Peso: {{ miMascota.peso }} kg</p>
+<p>Color: {{ miMascota.color }}</p>
+
+<div>
+  <p>Hambre: {{ miMascota.hambre }}</p>
+  <div class="barra">
+    <div [ngStyle]="{ 'width.%': miMascota.hambre }"></div>
+  </div>
+</div>
+
+<p>Energía: {{ miMascota.energia }}</p>
+<p>Salud: {{ miMascota.salud }}</p>
+
+<div>
+  <p>Nivel de felicidad: {{ miMascota.nivelFelicidad }}</p>
+  <div class="barra">
+    <div [ngStyle]="{ 'width.%': miMascota.nivelFelicidad }"></div>
+  </div>
+</div>
+
+<button (click)="alimentarMascota()">Alimentar</button>
+<button (click)="jugarConMascota()">Jugar</button>
